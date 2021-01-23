@@ -12,7 +12,7 @@ public class Solution {
     static String timeInWords(int h, int m) {
         String[] num;
         String timeWords = "" ;
-        num = new String[]{"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty two", "twenty three", "twenty two", "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven", "twenty eight"};
+        num = new String[]{"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two", "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven", "twenty eight", "twenty nine"};
         
         if (m == 00) {
             timeWords = num[h] + " " + "o' clock";
@@ -23,13 +23,13 @@ public class Solution {
         } else if (m == 45) {
             timeWords = "quarter to" + " " + num[h+1];
         } else if (m < 30 && m != 01 && m != 15) {
-            timeWords = num[m] + " " + "minutes past" + num[h];
+            timeWords = num[m] + " " + "minutes past" + " " + num[h];
         } else if (m == 01) {
             timeWords = "one minute past" + " " + num[h];
         } else if (m > 30 && m != 59 && m != 45) {
             timeWords = num[60-m] + " " + "minutes to" + " " + num[h+1];
         } else if (m == 59) {
-            timeWords = "one minute to" + " " +num[h+1];
+            timeWords = "one minute to" + " " + num[h+1];
         }
        
         return timeWords;
