@@ -1,0 +1,33 @@
+static int truckTour(int[][] petrolpumps) {
+        /*
+         * Write your code here.
+         */
+        int petrol = 0;
+        int distance = 0;
+        int curVal = 0;
+        for (int i = 0; i < petrolpumps.length; i++) {
+            System.out.println(petrol);                    
+            System.out.println(petrol);                   
+            distance = petrolpumps[i][1];
+            // System.out.println(distance);                    
+            if (petrol > distance) {
+                int curPetrol = 0;
+                curVal = i;
+                System.out.println(petrol);                   
+                System.out.println(distance);                    
+                // System.out.println(curVal);                        
+                petrol += petrolpumps[i][0];
+                curPetrol += petrol - distance;
+                System.out.println(curPetrol);
+                petrol = curPetrol;     
+                System.out.println(petrol);                    
+                
+                if (petrol > 0) {
+                    continue;
+                }
+            } else {
+                continue;
+            }
+        }
+        return 0;
+    }
